@@ -1,35 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<!-- Project Descriptor -->
 	<modelVersion>4.0.0</modelVersion>
+
+	<!-- Parent Spring Boot Configuration -->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/> <!-- Lookup parent from repository -->
 	</parent>
-	<groupId>Authentication</groupId>
+
+	<!-- Project Information -->
+	<groupId>com.authentication</groupId>
 	<artifactId>SpringAuthJwt</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringAuthJwt</name>
-	<description>Demo project for Spring Boot</description>
-	<url/>
-	<licenses>
-		<license/>
-	</licenses>
-	<developers>
-		<developer/>
-	</developers>
-	<scm>
-		<connection/>
-		<developerConnection/>
-		<tag/>
-		<url/>
-	</scm>
+	<description>Demo project for Spring Boot with JWT Authentication</description>
+
+	<!-- Java Version Compatibility -->
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+
+	<!-- Dependencies -->
 	<dependencies>
+
+		<!-- Spring Boot Starters -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -45,12 +44,14 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
+		<!-- Lombok for Simplified Java Code -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
 
+		<!-- Testing Dependencies -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -63,29 +64,25 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- Add JJWT dependencies for JWT functionality -->
-		<dependency>
-			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-api</artifactId>
-			<version>0.12.0</version> <!-- Version of jjwt-api -->
-		</dependency>
-
+		<!-- JJWT Library for JWT Functionality -->
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
 			<artifactId>jjwt-impl</artifactId>
-			<version>0.12.0</version> <!-- Version of jjwt-impl -->
+			<version>0.12.3</version>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 			<groupId>io.jsonwebtoken</groupId>
-			<artifactId>jjwt-orgjson</artifactId>
-			<version>0.12.0</version> <!-- Version of jjwt-orgjson -->
+			<artifactId>jjwt-api</artifactId>
+			<version>0.12.3</version>
 		</dependency>
 		<dependency>
-			<groupId>Authentication</groupId>
-			<artifactId>SpringAuthJwt</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>io.jsonwebtoken</groupId>
+			<artifactId>jjwt-jackson</artifactId>
+			<version>0.12.3</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+
+		<!-- MySQL Connector for Database Connectivity -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
@@ -94,8 +91,11 @@
 
 	</dependencies>
 
+	<!-- Build Plugins -->
 	<build>
 		<plugins>
+
+			<!-- Spring Boot Maven Plugin for Application Packaging -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
@@ -108,6 +108,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
+
 		</plugins>
 	</build>
 
