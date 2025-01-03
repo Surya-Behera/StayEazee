@@ -80,6 +80,18 @@
 			<artifactId>jjwt-orgjson</artifactId>
 			<version>0.12.0</version> <!-- Version of jjwt-orgjson -->
 		</dependency>
+		<dependency>
+			<groupId>Authentication</groupId>
+			<artifactId>SpringAuthJwt</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.33</version>
+		</dependency>
+
 	</dependencies>
 
 	<build>
